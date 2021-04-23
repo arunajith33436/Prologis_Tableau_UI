@@ -1,0 +1,9 @@
+
+<!-- <div #viz id="tableauViz"></div> -->
+<div *ngIf ="ticket">
+<ngx-tableau
+serverUrl="https://20.51.187.196"
+report={{report}}
+ticket={{ticket}}
+></ngx-tableau>
+</div>

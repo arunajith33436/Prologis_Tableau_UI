@@ -1,0 +1,55 @@
+{
+    "pagination": {
+        "pageNumber": "1",
+        "pageSize": "100",
+        "totalAvailable": "4"
+    },
+    "projects": {
+        "project": [
+            {
+                "owner": {
+                    "id": "8ada6c83-4e63-457f-acc8-0e10a336fadb"
+                },
+                "id": "683e9650-05f0-41e2-bdc6-89ea9689327d",
+                "name": "default",
+                "description": "The default project that was automatically created by Tableau.",
+                "createdAt": "2020-12-17T14:21:37Z",
+                "updatedAt": "2020-12-17T14:21:37Z",
+                "contentPermissions": "ManagedByOwner"
+            },
+            {
+                "owner": {
+                    "id": "7276f726-77f6-4db7-892e-9fc323352fc1"
+                },
+                "id": "39328079-83a9-4386-91fd-a20ec2580227",
+                "name": "Samples",
+                "description": "This project includes automatically uploaded samples.",
+                "createdAt": "2020-12-17T14:21:46Z",
+                "updatedAt": "2020-12-17T14:21:46Z",
+                "contentPermissions": "ManagedByOwner"
+            },
+            {
+                "owner": {
+                    "id": "7276f726-77f6-4db7-892e-9fc323352fc1"
+                },
+                "id": "985d353f-e203-42e8-9bae-953a8764b589",
+                "name": "Test Project",
+                "description": "A project to test the project creation activity",
+                "createdAt": "2020-12-22T16:33:33Z",
+                "updatedAt": "2020-12-22T16:33:33Z",
+                "contentPermissions": "ManagedByOwner"
+            },
+            {
+                "owner": {
+                    "id": "7276f726-77f6-4db7-892e-9fc323352fc1"
+                },
+                "id": "723bf98c-075a-4604-af48-03454cc1de99",
+                "name": "Pro poc",
+                "description": "",
+                "createdAt": "2020-12-22T16:37:53Z",
+                "updatedAt": "2020-12-22T16:37:53Z",
+                "contentPermissions": "ManagedByOwner"
+            }
+        ]
+    }
+}

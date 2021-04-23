@@ -1,0 +1,210 @@
+
+
+<!-- Start container-fluid -->
+<div class="container-fluid">
+
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card-box widget-inline">
+                <div class="row">
+                    <div class="cardhead mb-0">
+                        <h5 class="mt-0 headline">Explore</h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end row -->
+
+    <!-- Custom Details Row -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card-box widget-inline">
+                <div class="row">
+                    
+                        <div>
+                            <h6>Role : {{ userRole }}</h6>
+                        </div>
+                </div>
+
+                <div class="row">
+                       <div>
+                        <h6>Region : {{ userRegion }}</h6>
+                       </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-box">
+                <!--Section 1 -->
+                <div class="cardhead">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle p-0" type="button" id="allproject" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            All Projects
+                            <span class="mdi mdi-chevron-down"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="allproject">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    <div class="filter-icons">
+                        <span class="mdi mdi-sort-descending"></span>
+                        <span class="mdi mdi-view-list"></span>
+                        <span class="mdi mdi-filter-outline"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 mb-4" *ngFor="let project of projectsList; let i = index">
+                        <div class="box box-shadow-1 d-flex flex-column" (click)="fetchWorkbooks(project.id)">
+                            <div class="sec-menu">
+                                <a href="#"><i class="mdi mdi-star-outline text-success mx-1"></i></a>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                            class="mdi mdi-dots-vertical mx-1"></i></a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item">Action 1</a>
+                                        <a href="#" class="dropdown-item">Action 2</a>
+                                        <a href="#" class="dropdown-item">Action 3</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <em class="folder mdi mdi-folder-text"></em>
+                            <div class="card-body p-2" >
+                                <h5 class="card-title"> {{ project.name }}</h5>
+                                <p class="card-text"> {{ project.description }}</p>
+                                <!-- <a target="_blank" href="https://52.146.13.192/#/projects/{{i+1}}">click here</a> -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row" *ngIf = "workbooksList">
+        <div class="col-lg-12">
+            <div class="card-box">
+                <!--Section 1 -->
+                <div class="cardhead">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle p-0" type="button" id="allproject" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            All Workbooks
+                            <span class="mdi mdi-chevron-down"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="allproject">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    <div class="filter-icons">
+                        <span class="mdi mdi-sort-descending"></span>
+                        <span class="mdi mdi-view-list"></span>
+                        <span class="mdi mdi-filter-outline"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 mb-4" *ngFor="let workbook of workbooksList; let i = index">
+                        <div class="box box-shadow-1 d-flex flex-column" (click)="fetchViews(workbook.id)">
+                            <div class="sec-menu">
+                                <a href="#"><i class="mdi mdi-star-outline text-success mx-1"></i></a>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                            class="mdi mdi-dots-vertical mx-1"></i></a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item">Action 1</a>
+                                        <a href="#" class="dropdown-item">Action 2</a>
+                                        <a href="#" class="dropdown-item">Action 3</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <em class="folder mdi mdi-folder-text"></em>
+                            <div class="card-body p-2" >
+                                <h5 class="card-title"> {{ workbook.name }}</h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row" *ngIf = "viewsList">
+        <div class="col-lg-12">
+            <div class="card-box">
+                <!--Section 1 -->
+                <div class="cardhead">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle p-0" type="button" id="allproject" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            All Views
+                            <span class="mdi mdi-chevron-down"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="allproject">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    <div class="filter-icons">
+                        <span class="mdi mdi-sort-descending"></span>
+                        <span class="mdi mdi-view-list"></span>
+                        <span class="mdi mdi-filter-outline"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 mb-4" *ngFor="let view of viewsList; let i = index">
+                        <div class="box box-shadow-1 d-flex flex-column" (click)="renderView(view.workbook.id,view.name)">
+                            <div class="sec-menu">
+                                <a href="#"><i class="mdi mdi-star-outline text-success mx-1"></i></a>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                            class="mdi mdi-dots-vertical mx-1"></i></a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item">Action 1</a>
+                                        <a href="#" class="dropdown-item">Action 2</a>
+                                        <a href="#" class="dropdown-item">Action 3</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <em class="folder mdi mdi-folder-text"></em>
+                            <div class="card-body p-2" >
+                                <h5 class="card-title"> {{ view.name }}</h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<!-- end container-fluid -->
